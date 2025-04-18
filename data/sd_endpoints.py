@@ -1,11 +1,12 @@
 import requests
 from typing import Optional
+import streamlit as st
 from data.sd_endpoints import CompanyInfo, IndexInfo, RelatedCompanies, HistoricalPrices, IndexHistoricalPrices
 
 class StockDioUtils:
     def __init__(self, app_key: Optional[str] = None):
         self.base_url = "https://api.stockdio.com"
-        self.app_key = app_key or "F21932D7528E4EF58D7EC2AAC60C3335"  # TODO: SET IN .secrets
+        self.app_key = st.secrets["sd_key"]
 
     def _build_url(self, endpoint: str, **params) -> str:
         params["app-key"] = self.app_key
