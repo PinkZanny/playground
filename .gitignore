@@ -2,3 +2,5 @@
 venv/
 .idx/
 .vscode/
+data/sd_enpoints.py
+data/sd_maps.py
