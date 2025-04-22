@@ -65,7 +65,7 @@ def render(asset:str = "AAPL", _: gettext.translation = None):
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.2,
+            y=-0.5,
             xanchor="center",
             x=0.5
         ),
@@ -212,7 +212,10 @@ def render(asset:str = "AAPL", _: gettext.translation = None):
             fig.add_trace(go.Scatter(x=xs_cdf, y=normal_cdf, mode='lines',
                  line=dict(color='red'), name='Normal CDF'),
                  row=2, col=1)
-        st.plotly_chart(fig)
+        col_left, col_center, col_right = st.columns([1, 2, 1])
+        with col_center:
+            st.plotly_chart(fig, use_container_width=True)
+        
         
 
     with asset_screener_tab:
