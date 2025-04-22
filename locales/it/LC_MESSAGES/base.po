@@ -1,0 +1,142 @@
+# -*- coding: utf-8 -*-
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-22 09:41+0200\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: playground_main.py:69
+msgid "Choose a section:"
+msgstr "Scegli una sezione:"
+
+#: playground_main.py:70 playground_main.py:78 sections/market_overview.py:19
+msgid "Market Overview"
+msgstr "Overview di Mercato"
+
+#: playground_main.py:70 playground_main.py:80
+msgid "SIP (Should I Panic?)"
+msgstr ""
+
+#: playground_main.py:70 playground_main.py:82
+msgid "Mean Reversion Heatmap"
+msgstr ""
+
+#: playground_main.py:70 playground_main.py:84
+msgid "Market Regime Detector"
+msgstr ""
+
+#: playground_main.py:73
+msgid "Select an asset:"
+msgstr "Seleziona un asset:"
+
+#: sections/market_overview.py:20
+msgid "Market's Volatility Today"
+msgstr "Volatilità nel Mercato Oggi"
+
+#: sections/market_overview.py:23
+msgid "This is the Market's Volatility Today section."
+msgstr ""
+
+#: sections/market_overview.py:27 sections/market_overview.py:58
+msgid "Select the rolling window size (in days):"
+msgstr "Seleziona la dimensione della finestra mobile (in giorni):"
+
+#: sections/market_overview.py:32
+msgid "Close Price for SP500"
+msgstr ""
+
+#: sections/market_overview.py:32
+msgid "Volatility for SP500"
+msgstr ""
+
+#: sections/market_overview.py:41 sections/market_overview.py:129
+msgid "Shaded Area = ±1σ (Volatility Band)"
+msgstr "Area Ombreggiata = ±1σ (Banda di Volatilità)"
+
+#: sections/market_overview.py:51
+msgid "Volatility Explorer"
+msgstr "Esplora-Volatilità"
+
+#: sections/market_overview.py:51 sections/market_overview.py:178
+msgid "Asset Screener"
+msgstr ""
+
+#: sections/market_overview.py:55
+msgid "Volatility Explorer for "
+msgstr "Esplora-Volatilità di "
+
+#: sections/market_overview.py:57
+msgid "This is the Volatility Explorer section."
+msgstr ""
+
+#: sections/market_overview.py:74
+msgid "Select the type of plot for returns:"
+msgstr "Seleziona il tipo di grafico per i rendimenti:"
+
+#: sections/market_overview.py:74
+msgid "Log Returns"
+msgstr "Rendimenti Logaritmici"
+
+#: sections/market_overview.py:74
+msgid "First Difference"
+msgstr "Prima Differenza (Rendimenti)"
+
+#: sections/market_overview.py:114
+msgid "Show Rolling σ"
+msgstr "Mostra σ Mobile"
+
+#: sections/market_overview.py:116
+msgid "Rolling"
+msgstr "Mobile"
+
+#: sections/market_overview.py:118
+msgid "Show Smoothed σ"
+msgstr "Mostra σ Smussata"
+
+#: sections/market_overview.py:121
+msgid "Smoothed"
+msgstr "Smussata"
+
+#: sections/market_overview.py:139
+msgid ""
+"\n"
+"            **σ (standard deviation)** is a statistical measure of "
+"volatility. The wider the bands, the more the asset's returns are varying.\n"
+"            \n"
+"            - **Rolling σ** reacts fast to new data, but can be noisy.\n"
+"            - **Smoothed σ** shows long-term trends and regime shifts in "
+"risk.\n"
+"            \n"
+"            If the series breaks through these bands, something chaotic "
+"might be happening.\n"
+"            "
+msgstr ""
+"\n"
+"            **σ (deviazione standard)** è una misura statistica della "
+"volatilità. Più larghe sono le bande, più i rendimenti dell'asset variano.\n"
+"            \n"
+"            - **σ Mobile** reagisce rapidamente ai nuovi dati, ma può essere "
+"influenzata da minimi swing.\n"
+"            - **σ Smussata** mostra le tendenze a lungo termine e i "
+"cambiamenti di regime nel rischio.\n"
+"            \n"
+"            Se la serie supera queste bande, potrebbe succedere qualcosa di "
+"caotico.\n"
+"            "
+
+#: sections/market_overview.py:150
+msgid "Returns Distribution"
+msgstr "Distribuzione dei Rendimenti"
+
+#: sections/market_overview.py:152
+msgid "Select the number of bins for the histogram:"
+msgstr "Seleziona il numero di intervalli per l'istogramma:"
+
+#: sections/market_overview.py:153
+msgid "Show Normal Distribution"
+msgstr "Mostra la Distribuzione Normale"
+
+#: sections/market_overview.py:179
+msgid "This is the Asset Screener section."
+msgstr "Questa è la sezione del Selettore di Asset."
