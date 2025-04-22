@@ -119,13 +119,18 @@ class RelatedCompanies:
     relation_type: str
 
     @staticmethod
-    def from_json(data: Dict[str, Any]) -> 'RelatedCompanies':
-        return RelatedCompanies(
-            symbol=data["symbol"],
-            company=data["company"],
-            exchange=data["exchange"],
-            relation_type=data["relationType"]
-        )
+    def from_json(data: Dict[str, Any]) -> list['RelatedCompanies']:
+        related = data["data"]["relatedSymbols"]
+        companies = []
+        for row in related["values"]:
+            company_data = dict(zip(related["columns"], row))
+            companies.append(RelatedCompanies(
+                symbol=company_data["symbol"],
+                company=company_data["company"],
+                exchange=company_data["exchange"],
+                relation_type=company_data["relationType"]
+            ))
+        return companies
 
 
 @dataclass

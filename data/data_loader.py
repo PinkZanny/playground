@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 from data.sd_endpoints import StockDioUtils
 from datetime import datetime
-from data.sd_maps import HistoricalPrices, IndexHistoricalPrices
+from data.sd_maps import HistoricalPrices, IndexHistoricalPrices, RelatedCompanies
 import pandas as pd
 
 POLYGON_KEY = st.secrets["polygon_key"]
@@ -17,12 +17,30 @@ def fetch_data(ticker: str):
     df.set_index("date", inplace=True)
     return {"name": data.company, "history": df}
 
+@st.cache_data(show_spinner=True)
 def fetch_index_data(index: str):
     data: IndexHistoricalPrices = loader.get_index_historical_prices(index, from_date="2020-01-01", to_date=datetime.now().strftime("%Y-%m-%d"))
     df = pd.DataFrame(data.prices, columns=["date", "open", "high", "low", "close", "volume"])
     df["date"] = pd.to_datetime(df["date"])
     df.set_index("date", inplace=True)
     return {"name": index, "history": df}
+
+@st.cache_data(show_spinner=False)
+def fetch_related_companies_data(ticker: str):
+    data: RelatedCompanies = loader.get_related_companies(ticker)
+    df = pd.DataFrame(data, columns=["symbol", "company", "exchange", "relation_type"])
+    progress_bar = st.progress(0)
+    total = len(df)
+    for idx, symbol in enumerate(df["symbol"]):
+        try:
+            related_data = fetch_data(symbol)
+            df.loc[df["symbol"] == symbol, "history"] = related_data["history"]
+        except Exception as e:
+            st.error(f"Error fetching data for {symbol}: {e}")
+        progress_bar.progress((idx + 1) / total)
+    
+    df["history"] = df["history"].apply(lambda x: x if isinstance(x, pd.DataFrame) else None)
+    return df
 
 @st.cache_data(show_spinner=False)
 def get_symbol_search(query: str):

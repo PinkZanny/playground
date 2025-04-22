@@ -36,32 +36,6 @@ elif st.session_state["lang_code"] != lang_code:
     st.rerun()
 _ = get_translation(st.session_state["lang_code"])
 
-"""
-This is the playground for my website, zanqor.com
-Visualization: 
-- Streamlit (under the hood)
-- Plotly
-- Matplotlib
-- Seaborn
-
-Data Handling:
-- Pandas
-- Polars
-
-Statistics:
-- Numpy
-- Scipy
-- Statsmodels
-
-Sections:
-- Market Overview
--- Volatility Explorer
--- Asset Screener with z-scores, sharpe ratios, and other metrics
-- SIP (Should I Panic?)
-- Mean Reversion Heatmap (Correlation and Cointegration)
-- Market Regime Detector
-"""
-
 st.sidebar.title("ZANQOR Playground")
 st.sidebar.image("assets/portfolio_logo_variant.png", width=200)
 
@@ -74,12 +48,13 @@ st.sidebar.write(_("Select an asset:"))
 with st.sidebar:
     asset = render_searchbar()
 
-# Section routing
+st.sidebar.write("I am NOT a financial advisor. Nothing in this app should be considered financial advice. Please do your own research before making any investment decisions.")
+
 if section == _("Market Overview"):
     market_overview.render(asset=asset, _=_)
 elif section == _("SIP (Should I Panic?)"):
-    sip.render()
+    sip.render(asset=asset, _=_)
 elif section == _("Mean Reversion Heatmap"):
-    mean_reversion.render()
+    mean_reversion.render(asset=asset, _=_)
 elif section == _("Market Regime Detector"):
-    market_regime.render()
+    market_regime.render(asset=asset, _=_)

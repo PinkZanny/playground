@@ -2,103 +2,183 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-22 09:41+0200\n"
+"POT-Creation-Date: 2025-04-22 14:11+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: playground_main.py:69
+#: playground_main.py:43
 msgid "Choose a section:"
 msgstr "Scegli una sezione:"
 
-#: playground_main.py:70 playground_main.py:78 sections/market_overview.py:19
+#: playground_main.py:44 playground_main.py:53 sections/market_overview.py:18
 msgid "Market Overview"
 msgstr "Overview di Mercato"
 
-#: playground_main.py:70 playground_main.py:80
+#: playground_main.py:44 playground_main.py:55 sections/sip.py:9
 msgid "SIP (Should I Panic?)"
 msgstr ""
 
-#: playground_main.py:70 playground_main.py:82
+#: playground_main.py:44 playground_main.py:57 sections/mean_reversion.py:8
 msgid "Mean Reversion Heatmap"
 msgstr ""
 
-#: playground_main.py:70 playground_main.py:84
+#: playground_main.py:44 playground_main.py:59 sections/market_regime.py:8
 msgid "Market Regime Detector"
 msgstr ""
 
-#: playground_main.py:73
+#: playground_main.py:47
 msgid "Select an asset:"
 msgstr "Seleziona un asset:"
 
-#: sections/market_overview.py:20
+#: sections/market_overview.py:19
 msgid "Market's Volatility Today"
 msgstr "Volatilità nel Mercato Oggi"
 
-#: sections/market_overview.py:23
-msgid "This is the Market's Volatility Today section."
-msgstr ""
-
-#: sections/market_overview.py:27 sections/market_overview.py:58
+#: sections/market_overview.py:25 sections/market_overview.py:93
 msgid "Select the rolling window size (in days):"
 msgstr "Seleziona la dimensione della finestra mobile (in giorni):"
 
-#: sections/market_overview.py:32
-msgid "Close Price for SP500"
+#: sections/market_overview.py:36
+msgid "S&P 500 rolling volatility is currently above its historical average. "
 msgstr ""
+"La volatilitá dell'indice S&P500 al momento é superiore alla sua media "
+"storica. "
 
-#: sections/market_overview.py:32
-msgid "Volatility for SP500"
+#: sections/market_overview.py:37
+msgid ""
+"This suggests increased market uncertainty and higher perceived risk. "
+"Traders may demand more premium for risk exposure."
 msgstr ""
+"Questo suggerisce una maggiore incertezza nel mercato ed un rischio "
+"percepito maggiore.I trader potrebbero richiedere cifre più alte per "
+"compensare l'esposizione al rischio."
 
-#: sections/market_overview.py:41 sections/market_overview.py:129
-msgid "Shaded Area = ±1σ (Volatility Band)"
-msgstr "Area Ombreggiata = ±1σ (Banda di Volatilità)"
+#: sections/market_overview.py:39
+msgid "S&P 500 rolling volatility is currently below its historical average. "
+msgstr ""
+"La volatilitá dell'indice S&P500 al momento é inferiore alla sua media "
+"storica. "
 
-#: sections/market_overview.py:51
+#: sections/market_overview.py:40
+msgid ""
+"This indicates a calmer market environment with lower perceived risk—often "
+"associated with stable or bullish periods."
+msgstr ""
+"Questo indica un mercato piú calmo, con un rischio associato minore. Di "
+"norma potrebbe indicare una situazione di mercato stabile oppure un periodo "
+"di crescita. "
+
+#: sections/market_overview.py:42
+msgid "S&P 500 rolling volatility is in line with its historical average. "
+msgstr ""
+"La volatilitá dell'indice S&P500 al momento é in linea con la sua media "
+"storica. "
+
+#: sections/market_overview.py:43
+msgid ""
+"No major deviation in risk expectations—market conditions are within "
+"expected ranges."
+msgstr ""
+"Non ci sono rischi associati che deviano in maniera sostanziale dalle "
+"condizioni di mercato normali."
+
+#: sections/market_overview.py:81
+msgid ""
+"The VIX is a measure of the market's expectation of future volatility, "
+"derived from the prices of S&P 500 index options. A higher VIX indicates "
+"higher expected volatility, while a lower VIX suggests lower expected "
+"volatility."
+msgstr ""
+"Il VIX é un metro di giudizio per quanto riguarda la volatilitá attesa "
+"futura. Questo indice é derivato dai prezzi delle opzioni associate "
+"all'indice S&P500. Un valore associato piú alto indica una maggiore "
+"incertezza e maggiore volatilitá, mentre un valore piú basso esprime "
+"esattamente il contrario."
+
+#: sections/market_overview.py:82
+msgid ""
+"This means that whenever the VIX is higher than the rolling volatility, the "
+"market is expecting more volatility than what is actually happening. This "
+"can be interpreted as a sign of uncertainty or fear in the market. On the "
+"other hand, when the VIX is lower than the rolling volatility, it indicates "
+"that the market is expecting less volatility than what is actually "
+"happening. This can be interpreted as a sign of confidence or complacency in "
+"the market."
+msgstr ""
+"Questo significa che ogni qualvolta il VIX supera la volatilitá realizzata "
+"(rolling), il mercato si aspetta più volatilitá di quella che effettivamente "
+"sta capitando. questo puó essere interpretato come un segnale di incertezza "
+"o paura nel mercato. Contrariamente a ció, quando il VIX rimane sotto la "
+"soglia della volatilitá realizzata, indica che il mercato si aspetta meno "
+"volatilitá/incertezza rispetto a quella che si sta verificando. Spesso "
+"questo viene interpretato come un segno di fiducia nel mercato."
+
+#: sections/market_overview.py:83
+msgid ""
+"What can you do with this? You can use this information to make informed "
+"decisions about your investments. For example, if the VIX is higher than the "
+"rolling volatility, you might want to consider hedging your portfolio or "
+"reducing your exposure to risky assets, whereas if the VIX is lower than the "
+"rolling volatility, you might want to consider increasing your exposure to "
+"risky assets or taking advantage of the low volatility environment."
+msgstr ""
+"Che cosa puoi fare con queste informazioni? Puoi usarle per prendere "
+"decisioni informate sui tuoi investimenti. Ad esempio, se l'VIX è superiore "
+"alla volatilità mobile, potresti considerare di proteggere il tuo "
+"portafoglio o ridurre l'esposizione agli asset rischiosi, mentre se l'VIX è "
+"inferiore alla volatilità mobile, potresti considerare di aumentare "
+"l'esposizione agli asset rischiosi o approfittare di un ambiente di bassa "
+"volatilità."
+
+#: sections/market_overview.py:86
 msgid "Volatility Explorer"
 msgstr "Esplora-Volatilità"
 
-#: sections/market_overview.py:51 sections/market_overview.py:178
+#: sections/market_overview.py:86 sections/market_overview.py:213
 msgid "Asset Screener"
 msgstr ""
 
-#: sections/market_overview.py:55
+#: sections/market_overview.py:90
 msgid "Volatility Explorer for "
 msgstr "Esplora-Volatilità di "
 
-#: sections/market_overview.py:57
+#: sections/market_overview.py:92
 msgid "This is the Volatility Explorer section."
-msgstr ""
+msgstr "Questa è la sezione Esplora-Volatilità."
 
-#: sections/market_overview.py:74
+#: sections/market_overview.py:109
 msgid "Select the type of plot for returns:"
 msgstr "Seleziona il tipo di grafico per i rendimenti:"
 
-#: sections/market_overview.py:74
+#: sections/market_overview.py:109
 msgid "Log Returns"
 msgstr "Rendimenti Logaritmici"
 
-#: sections/market_overview.py:74
+#: sections/market_overview.py:109
 msgid "First Difference"
 msgstr "Prima Differenza (Rendimenti)"
 
-#: sections/market_overview.py:114
+#: sections/market_overview.py:149
 msgid "Show Rolling σ"
 msgstr "Mostra σ Mobile"
 
-#: sections/market_overview.py:116
+#: sections/market_overview.py:151
 msgid "Rolling"
 msgstr "Mobile"
 
-#: sections/market_overview.py:118
+#: sections/market_overview.py:153
 msgid "Show Smoothed σ"
 msgstr "Mostra σ Smussata"
 
-#: sections/market_overview.py:121
+#: sections/market_overview.py:156
 msgid "Smoothed"
 msgstr "Smussata"
 
-#: sections/market_overview.py:139
+#: sections/market_overview.py:164
+msgid "Shaded Area = ±1σ (Volatility Band)"
+msgstr "Area Ombreggiata = ±1σ (Banda di Volatilità)"
+
+#: sections/market_overview.py:174
 msgid ""
 "\n"
 "            **σ (standard deviation)** is a statistical measure of "
@@ -125,18 +205,440 @@ msgstr ""
 "caotico.\n"
 "            "
 
-#: sections/market_overview.py:150
+#: sections/market_overview.py:185
 msgid "Returns Distribution"
 msgstr "Distribuzione dei Rendimenti"
 
-#: sections/market_overview.py:152
+#: sections/market_overview.py:187
 msgid "Select the number of bins for the histogram:"
 msgstr "Seleziona il numero di intervalli per l'istogramma:"
 
-#: sections/market_overview.py:153
+#: sections/market_overview.py:188
 msgid "Show Normal Distribution"
 msgstr "Mostra la Distribuzione Normale"
 
-#: sections/market_overview.py:179
-msgid "This is the Asset Screener section."
-msgstr "Questa è la sezione del Selettore di Asset."
+#: sections/market_overview.py:214
+msgid ""
+"Here, you can check your selected asset's metrics against the related "
+"companies. This includes companies in the same sector and competitors."
+msgstr ""
+
+#: sections/market_overview.py:217
+msgid "Selected asset: "
+msgstr "Asset selezionato: "
+
+#: sections/market_overview.py:220
+msgid ""
+"\n"
+"            - **Cumulative Return**: The total return of the asset from the "
+"start date to the end date.\n"
+"            - **Sharpe Ratio**: A measure of risk-adjusted return. It "
+"indicates how much excess return you receive for the extra volatility you "
+"endure for holding a riskier asset.\n"
+"            - **Sortino Ratio**: Similar to the Sharpe ratio, but it only "
+"considers downside volatility. It is a measure of risk-adjusted return that "
+"focuses on negative returns.\n"
+"            - **Max Drawdown**: The maximum observed loss from a peak to a "
+"trough of a portfolio, before a new peak is attained. It is used to assess "
+"the risk of a particular investment.\n"
+"                          \n"
+"            This screener is useful when you want to compare your asset with "
+"its competitors or related companies, to maybe confirm an edge or just win "
+"an argument with your friends.\n"
+"            "
+msgstr ""
+"\n"
+"            - **Rendimento Cumulativo**: Il rendimento totale dell'asset "
+"dalla data di inizio alla data di fine.\n"
+"            - **Sharpe Ratio**: Una misura di rendimento aggiustato per il "
+"rischio. Indica quanto rendimento in eccesso ottieni per la volatilità "
+"aggiuntiva che subisci tenendo un asset più rischioso.\n"
+"            - **Sortino Ratio**: Simile al Sharpe Ratio, ma considera solo "
+"la volatilità negativa. È una misura di rendimento aggiustato per il rischio "
+"che si concentra sui rendimenti negativi.\n"
+"            - **Max Drawdown**: La perdita massima osservata da un picco a "
+"una valle di un portafoglio, prima che si raggiunga un nuovo picco. È "
+"utilizzato per valutare il rischio di un investimento particolare.\n"
+"                          \n"
+"            Questo screener è utile quando vuoi confrontare il tuo asset con "
+"i suoi concorrenti o aziende correlate, per magari confermare un vantaggio o "
+"semplicemente vincere una discussione con i tuoi amici.\n"
+"            "
+
+#: sections/market_overview.py:232
+msgid "Select the Risk Free Rate and Target Return:"
+msgstr "Seleziona il Tasso privo di rischio e il rendimento target:"
+
+#: sections/market_overview.py:239 sections/market_overview.py:271
+msgid "Cumulative Return"
+msgstr "Rendimento Cumulativo"
+
+#: sections/market_overview.py:240 sections/market_overview.py:272
+msgid "Sharpe Ratio"
+msgstr ""
+
+#: sections/market_overview.py:241 sections/market_overview.py:273
+msgid "Sortino Ratio"
+msgstr ""
+
+#: sections/market_overview.py:242 sections/market_overview.py:274
+msgid "Max Drawdown"
+msgstr ""
+
+#: sections/market_overview.py:245
+msgid "Base Asset Metrics"
+msgstr ""
+
+#: sections/market_overview.py:248
+msgid "Now, let's check the related companies."
+msgstr "Ora, vediamo le aziende correlate."
+
+#: sections/market_overview.py:322
+msgid "No data available for this group."
+msgstr "Nessun dato disponibile per questo gruppo."
+
+#: sections/market_regime.py:9
+msgid ""
+"This section provides a comprehensive overview of the Market Regime "
+"Detector, which is designed to help investors identify the current market "
+"regime based on various indicators."
+msgstr ""
+"Questa sezione fornisce una panoramica completa del Market Regime Detector, "
+"che è progettato per aiutare gli investitori a identificare il regime di "
+"mercato attuale basato su vari indicatori."
+
+#: sections/market_regime.py:11
+msgid "What is Market Regime Detection?"
+msgstr "Che cos'è la rilevazione del regime di mercato?"
+
+#: sections/market_regime.py:12
+msgid ""
+"\n"
+"        Market regime detection is a method used to identify different "
+"phases or regimes in financial markets, such as bull, bear, or sideways "
+"markets. By analyzing historical price movements and other indicators, "
+"investors can gain insights into the prevailing market conditions and adjust "
+"their strategies accordingly.\n"
+"        \n"
+"        The Market Regime Detector uses a combination of technical "
+"indicators and statistical thresholds to classify the current market regime. "
+"This information can be valuable for making informed investment decisions.\n"
+"        "
+msgstr ""
+
+#: sections/market_regime.py:18
+msgid "How to use the Market Regime Detector"
+msgstr "Come usare il Market Regime Detector"
+
+#: sections/market_regime.py:19
+msgid ""
+"\n"
+"        1. **Select an Index**: Choose a major index (e.g., S&P 500, "
+"FTSE100).  \n"
+"        2. **Set Parameters**:  \n"
+"           - Rolling window for smoothing returns and volatility.  \n"
+"           - Return threshold to distinguish up/down trends.  \n"
+"           - Volatility threshold to identify high-risk periods.  \n"
+"        3. **Run Detection**: The app computes rolling mean returns and "
+"volatility, then classifies each day as:\n"
+"           - **Bull**: positive trend & low volatility  \n"
+"           - **Bear**: negative trend & high volatility  \n"
+"           - **Ranged**: everything else  \n"
+"        4. **Visualize**: View the price chart shaded by regime, and see the "
+"regime distribution over time.\n"
+"        "
+msgstr ""
+
+#: sections/market_regime.py:32
+msgid "Select Index for Regime Detection"
+msgstr "Seleziona un indice per la rilevazione del regime"
+
+#: sections/market_regime.py:33 sections/mean_reversion.py:74
+msgid "Rolling window (days)"
+msgstr "Finestra mobile (giorni)"
+
+#: sections/market_regime.py:34
+msgid "Return threshold (%)"
+msgstr "Soglia di rendimento (%)"
+
+#: sections/market_regime.py:35
+msgid "Volatility threshold (%)"
+msgstr "Soglia di volatilità (%)"
+
+#: sections/market_regime.py:59
+msgid "Market Regime Shading"
+msgstr "Ombreggiatura del regime di mercato"
+
+#: sections/market_regime.py:59
+msgid "Index Price"
+msgstr "Prezzo dell'indice"
+
+#: sections/market_regime.py:62
+msgid "Regime Distribution"
+msgstr "Distribuzione del regime"
+
+#: sections/market_regime.py:67
+msgid "Asset Regime Detector for "
+msgstr "Asset Regime Detector per "
+
+#: sections/market_regime.py:95
+msgid "Price"
+msgstr "Prezzo"
+
+#: sections/market_regime.py:99
+msgid "Asset Regime Distribution"
+msgstr "Distribuzione del regime dell'asset"
+
+#: sections/mean_reversion.py:9
+msgid ""
+"This section provides a comprehensive overview of the Mean Reversion "
+"Heatmap, which is designed to help investors identify potential mean "
+"reversion opportunities in the market."
+msgstr ""
+"Questa sezione fornisce una panoramica completa della Heatmap di Mean "
+"Reversion, che è progettata per aiutare gli investitori a identificare "
+"potenziali opportunità di mean reversion nel mercato."
+
+#: sections/mean_reversion.py:10
+msgid "What is Mean Reversion?"
+msgstr "Cos'è la Mean Reversion?"
+
+#: sections/mean_reversion.py:11
+msgid ""
+"\n"
+"        Mean reversion is a financial theory suggesting that asset prices "
+"and historical returns eventually return to their long-term mean or average "
+"level. This concept is based on the idea that extreme price movements are "
+"often followed by a reversal towards the mean.\n"
+"\n"
+"        The Mean Reversion Heatmap visualizes the current spread between "
+"pairs of cointegrated or correlated assets relative to their historical "
+"mean, helping investors identify potential trading opportunities. Colors "
+"indicate standardized deviations:\n"
+"\n"
+"        - **Green**: Spread well below its mean → potential buy\n"
+"        - **Yellow**: Slightly below mean → mild buy\n"
+"        - **Orange**: Slightly above mean → mild sell\n"
+"        - **Red**: Well above mean → potential sell\n"
+"        "
+msgstr ""
+
+#: sections/mean_reversion.py:22
+msgid "How to use the Mean Reversion Heatmap"
+msgstr ""
+
+#: sections/mean_reversion.py:23
+msgid ""
+"\n"
+"        **1. Universe Selection**  \n"
+"        Use the dropdown to pick one of three universes:\n"
+"        - **Well Cointegrated**: Pairs known to share a stable long‑run "
+"relationship  \n"
+"        - **Well Correlated**: Pairs that move together over time  \n"
+"        - **Hedged**: An asset vs. a hedging instrument (bonds, gold, etc.)\n"
+"\n"
+"        **2. Rolling Window**  \n"
+"        Adjust the slider to set how many days of history to use when "
+"computing the mean and standard deviation of each pair’s spread.\n"
+"\n"
+"        **3. Z‑Score Calculation**  \n"
+"        For each selected pair `(i,j)`, we compute:\n"
+"        ```\n"
+"        spread = price_i - price_j\n"
+"        z = (spread_today - mean(spread_last_N)) / std(spread_last_N)\n"
+"        ```\n"
+"        Cells are blank for non‑pairs. Diagonal = 0.\n"
+"\n"
+"        **4. Color Coding**  \n"
+"        - **Green** (z ≪ 0): spread far below its mean → potential "
+"**buy**  \n"
+"        - **Yellow** (z slightly < 0): mild **buy** signal  \n"
+"        - **Orange** (z slightly > 0): mild **sell** signal  \n"
+"        - **Red** (z ≫ 0): spread far above its mean → potential **sell**\n"
+"\n"
+"        **5. Interpretation**  \n"
+"        A hot red cell means the spread is unusually wide—look for a "
+"convergence trade. A deep green cell means the spread is unusually narrow—"
+"consider the opposite.\n"
+"\n"
+"        "
+msgstr ""
+
+#: sections/mean_reversion.py:54
+msgid "Well Cointegrated"
+msgstr ""
+
+#: sections/mean_reversion.py:59
+msgid "Well Correlated"
+msgstr ""
+
+#: sections/mean_reversion.py:64
+msgid "Hedged"
+msgstr ""
+
+#: sections/mean_reversion.py:71
+msgid "Select universe:"
+msgstr ""
+
+#: sections/mean_reversion.py:104
+msgid "Z‑Score"
+msgstr ""
+
+#: sections/sip.py:10
+msgid ""
+"This section provides a comprehensive overview of the SIP (Should I Panic?) "
+"indicator, which is designed to help investors assess the current market "
+"sentiment and make informed decisions."
+msgstr ""
+
+#: sections/sip.py:12
+#, python-brace-format
+msgid ""
+"\n"
+"            The SIP (Should I Panic?) indicator is a proprietary metric that "
+"combines various market indicators, with custom weights, to provide a single "
+"value that reflects the current market sentiment. This section is divided "
+"into two main parts:\n"
+"            \n"
+"            1. **Indices Comparison**: This part compares the SIP values of "
+"major indices, allowing you to see how they are performing relative to each "
+"other.\n"
+"            2. **Asset SIP**: This part focuses on the selected asset, "
+"providing its SIP value and a comparison with the indices.\n"
+"            \n"
+"            The SIP value is calculated using the following formula:\n"
+"            \n"
+"            $$ SIP = w_1 \\cdot \\text{RSI} + w_2 \\cdot \\text{Volatility} "
+"+ w_3 \\cdot \\text{Volume} $$\n"
+"            \n"
+"            Where:\n"
+"            - \\(w_1\\), \\(w_2\\), and \\(w_3\\) are the weights assigned "
+"to each component.\n"
+"            - RSI is the Relative Strength Index, a momentum oscillator that "
+"measures the speed and change of price movements.\n"
+"            - Volatility is a measure of the price fluctuations of the "
+"asset.\n"
+"            - Volume is the total number of shares traded during a specific "
+"period.\n"
+"            \n"
+"            The SIP value is normalized to a scale of 0 to 100, where:\n"
+"            - 0-33: Low panic level (green)\n"
+"            - 34-66: Moderate panic level (orange)\n"
+"            - 67-100: High panic level (red)\n"
+"            "
+msgstr ""
+
+#: sections/sip.py:34
+msgid "Indices Comparison"
+msgstr ""
+
+#: sections/sip.py:45
+msgid "Select a Date"
+msgstr ""
+
+#: sections/sip.py:114
+msgid "Aggregated SIP"
+msgstr ""
+
+#: sections/sip.py:132
+msgid "No data available for the selected date."
+msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "        Market regime detection is a method used to identify different "
+#~ "phases or regimes in financial markets, such as bull, bear, or sideways "
+#~ "markets. By analyzing historical price movements and other indicators, "
+#~ "investors can gain insights into the prevailing market conditions and "
+#~ "adjust their strategies accordingly.\n"
+#~ "\n"
+#~ "        The Market Regime Detector uses a combination of technical "
+#~ "indicators and statistical thresholds to classify the current market "
+#~ "regime. This information can be valuable for making informed investment "
+#~ "decisions.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "       La rilevazione del regime di mercato è un metodo utilizzato per "
+#~ "identificare fasi o regimi diversi nei mercati finanziari, come mercati "
+#~ "rialzisti, ribassisti o laterali. Analizzando i movimenti storici dei "
+#~ "prezzi e altri indicatori, gli investitori possono ottenere informazioni "
+#~ "sulle condizioni di mercato prevalenti e adattare le loro strategie di "
+#~ "conseguenza.\n"
+#~ "\n"
+#~ "       Il Market Regime Detector utilizza una combinazione di indicatori "
+#~ "tecnici e soglie statistiche per classificare l'attuale regime di "
+#~ "mercato. Queste informazioni possono essere utili per prendere decisioni "
+#~ "di investimento informate.\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "        1. **Select an Index**: Choose a major index (e.g., S&P 500, "
+#~ "FTSE100).  \n"
+#~ "        2. **Set Parameters**:  \n"
+#~ "           - Rolling window for smoothing returns and volatility.  \n"
+#~ "           - Return threshold to distinguish up/down trends.  \n"
+#~ "           - Volatility threshold to identify high-risk periods.  \n"
+#~ "        3. **Run Detection**: The app computes rolling mean returns and "
+#~ "volatility, then classifies each day as:\n"
+#~ "           - **Bull**: positive trend & low volatility  \n"
+#~ "           - **Bear**: negative trend & high volatility  \n"
+#~ "           - **Ranged**: everything else  \n"
+#~ "        4. **Visualize**: View the price chart shaded by regime, and see "
+#~ "the regime distribution over time.\n"
+#~ "        "
+#~ msgstr ""
+#~ "\n"
+#~ "        1. **Seleziona un indice**: Scegli un indice principale (ad "
+#~ "esempio, S&P 500, FTSE100).  \n"
+#~ "        2. **Imposta i parametri**:  \n"
+#~ "           - Finestra mobile per smussare i rendimenti e la "
+#~ "volatilità.  \n"
+#~ "           - Soglia di rendimento per distinguere le tendenze rialziste/"
+#~ "ribassiste.  \n"
+#~ "           - Soglia di volatilità per identificare i periodi ad alto "
+#~ "rischio.  \n"
+#~ "        3. **Esegui la rilevazione**: L'app calcola i rendimenti medi "
+#~ "mobili e la volatilità, classificando ogni giorno come:\n"
+#~ "           - **Bull**: tendenza positiva e bassa volatilità  \n"
+#~ "           - **Bear**: tendenza negativa e alta volatilità  \n"
+#~ "           - **Ranged**: tutto il resto  \n"
+#~ "        4. **Visualizza**: Vedi il grafico dei prezzi colorato in base al "
+#~ "regime, e osserva la distribuzione del regime nel tempo.\n"
+#~ "        "
+
+#~ msgid ""
+#~ "\n"
+#~ "        Mean reversion is a financial theory suggesting that asset prices "
+#~ "and historical returns eventually return to their long-term mean or "
+#~ "average level. This concept is based on the idea that extreme price "
+#~ "movements are often followed by a reversal towards the mean.\n"
+#~ "\n"
+#~ "        The Mean Reversion Heatmap visualizes the current spread between "
+#~ "pairs of cointegrated or correlated assets relative to their historical "
+#~ "mean, helping investors identify potential trading opportunities. Colors "
+#~ "indicate standardized deviations:\n"
+#~ "\n"
+#~ "        - **Green**: Spread well below its mean → potential buy\n"
+#~ "        - **Yellow**: Slightly below mean → mild buy\n"
+#~ "        - **Orange**: Slightly above mean → mild sell\n"
+#~ "        - **Red**: Well above mean → potential sell\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "La mean reversion è una teoria finanziaria che suggerisce che i prezzi "
+#~ "degli asset e i rendimenti storici alla fine ritornano al loro valore "
+#~ "medio o livello medio a lungo termine. Questo concetto si basa sull'idea "
+#~ "che i movimenti di prezzo estremi siano spesso seguiti da una reversa "
+#~ "verso la media.\n"
+#~ "\n"
+#~ "La Mean Reversion Heatmap visualizza la differenza attuale tra coppie di "
+#~ "asset cointegrati o correlati rispetto alla loro media storica, aiutando "
+#~ "gli investitori a identificare potenziali opportunità di trading. I "
+#~ "colori indicano le deviazioni standardizzate:\n"
+#~ "\n"
+#~ "- **Verde**: Spread ben sotto la sua media → potenziale acquisto\n"
+#~ "- **Giallo**: Leggermente sotto la media → acquisto moderato\n"
+#~ "- **Arancione**: Leggermente sopra la media → vendita moderata\n"
+#~ "- **Rosso**: Ben sopra la media → potenziale vendita\n"
+#~ "\n"
