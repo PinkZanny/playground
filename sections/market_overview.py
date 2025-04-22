@@ -62,7 +62,13 @@ def render(asset:str = "AAPL", _: gettext.translation = None):
         title='S&P 500 Realized vs Implied Volatility',
         xaxis_title='Date',
         yaxis_title='Volatility (%)',
-        legend_title='Metric',
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=-0.2,
+            xanchor="center",
+            x=0.5
+        ),
         template='plotly_dark'
     )
 
@@ -188,10 +194,10 @@ def render(asset:str = "AAPL", _: gettext.translation = None):
         show_normal = st.checkbox(_("Show Normal Distribution"), value=False)
         asset_cdf = compute_cdf(log_returns, bins=bins)
         asset_pdf = compute_pdf(log_returns, bins=bins)
-        fig = make_subplots(rows=1, cols=2,
+        fig = make_subplots(rows=2, cols=1,
             subplot_titles=("PDF", "CDF"))
         fig.add_trace(go.Scatter(x=asset_pdf[1], y=asset_pdf[0], name='PDF'), row=1, col=1)
-        fig.add_trace(go.Scatter(x=asset_cdf[1], y=asset_cdf[0], name='CDF'), row=1, col=2)
+        fig.add_trace(go.Scatter(x=asset_cdf[1], y=asset_cdf[0], name='CDF'), row=2, col=1)
 
         if show_normal:
             m = log_returns.mean()
@@ -201,11 +207,11 @@ def render(asset:str = "AAPL", _: gettext.translation = None):
             normal_pdf = norm.pdf(xs_pdf, loc=m, scale=s)
             normal_cdf = norm.cdf(xs_cdf, loc=m, scale=s)
             fig.add_trace(go.Scatter(x=xs_pdf, y=normal_pdf, mode='lines',
-                         line=dict(color='red'), name='Normal PDF'),
-                         row=1, col=1)
+                 line=dict(color='red'), name='Normal PDF'),
+                 row=1, col=1)
             fig.add_trace(go.Scatter(x=xs_cdf, y=normal_cdf, mode='lines',
-                         line=dict(color='red'), name='Normal CDF'),
-                         row=1, col=2)
+                 line=dict(color='red'), name='Normal CDF'),
+                 row=2, col=1)
         st.plotly_chart(fig)
         
 

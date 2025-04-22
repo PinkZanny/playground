@@ -51,7 +51,18 @@ def render(asset: str = "AAPL", _: gettext.translation = None):
         df50 = df.tail(50).copy()
         df50["normalized"] = df50["close"] / df50["close"].iloc[0] * 100
         norm_fig.add_trace(go.Scatter(x=df50.index, y=df50["normalized"], mode="lines", name=name))
-    norm_fig.update_layout(title="Normalized Close Prices (Last 50)", xaxis_title="Date", yaxis_title="Base=100")
+    norm_fig.update_layout(
+        title="Normalized Close Prices (Last 50)",
+        xaxis_title="Date",
+        yaxis_title="Base=100",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=-0.3,
+            xanchor="center",
+            x=0.5
+        )
+    )
     st.plotly_chart(norm_fig)
     
     sip_today = {}
